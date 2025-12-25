@@ -210,10 +210,12 @@
 <body>
 
     <nav>
-        <div class="logo">VEGA<span>RIGS</span></div>
+        <div class="logo">VEXA<span>-RIGS</span></div>
         <div class="nav-links">
             <a href="#">Home</a>
+            <a href="#about">About</a>
             <a href="#shop">Pre-Builts</a>
+            <a href="#services">Services</a>
             <a href="#custom">Custom Build</a>
             <a href="#contact">Contact</a>
         </div>
@@ -223,6 +225,31 @@
         <h1>Welcome to <br> <span>VEXA-RIGS</span></h1>
         <p>Premium custom gaming PCs, workstations, and peripherals. Hand-built and stress-tested for maximum performance.</p>
         <button class="btn-primary" onclick="scrollToShop()">View Builds</button>
+    </section>
+
+    <!-- About Section -->
+    <section style="padding: 4rem 2rem; background: var(--bg-dark);" id="about">
+        <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+            <div>
+                <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Why Choose <span style="color: var(--neon-green);">VEXA-RIGS</span>?</h2>
+                <p style="color: var(--text-muted); line-height: 1.6; margin-bottom: 1.5rem;">
+                    With over 5 years of experience in custom PC building, we understand that every gamer and professional has unique needs. 
+                    That's why we offer personalized builds that match your budget and performance requirements.
+                </p>
+                <ul style="color: var(--text-muted); line-height: 1.8;">
+                    <li>✓ Hand-picked premium components</li>
+                    <li>✓ 48-hour burn-in testing</li>
+                    <li>✓ 1-year warranty on all builds</li>
+                    <li>✓ Free setup and optimization</li>
+                    <li>✓ Local pickup and delivery in India</li>
+                </ul>
+            </div>
+            <div style="text-align: center;">
+                <img src="https://images.unsplash.com/photo-1591488320449-011701bb6704?auto=format&fit=crop&w=600&q=60" 
+                     alt="Custom PC Building" 
+                     style="width: 100%; max-width: 500px; border-radius: 12px; border: 2px solid var(--neon-green);">
+            </div>
+        </div>
     </section>
 
     <h2 class="section-title" id="shop">Featured Rigs</h2>
@@ -257,7 +284,68 @@
                 <button class="btn-buy" onclick="addToCart('God Mode')">Add to Cart</button>
             </div>
         </div>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?auto=format&fit=crop&w=500&q=60" class="card-img" alt="Creator PC">
+            <div class="card-info">
+                <h3>Content Creator</h3>
+                <p class="specs">AMD Ryzen 9 • RTX 4070 Ti • 64GB RAM • 4TB SSD</p>
+                <span class="price">₹79,999 - ₹1,09,999</span>
+                <button class="btn-buy" onclick="addToCart('Content Creator')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=500&q=60" class="card-img" alt="Budget PC">
+            <div class="card-info">
+                <h3>Budget Beast</h3>
+                <p class="specs">AMD Ryzen 5 • RTX 3050 • 16GB RAM • 512GB SSD</p>
+                <span class="price">₹24,999 - ₹34,999</span>
+                <button class="btn-buy" onclick="addToCart('Budget Beast')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=500&q=60" class="card-img" alt="Workstation PC">
+            <div class="card-info">
+                <h3>Workstation Pro</h3>
+                <p class="specs">Intel i7 • RTX A4000 • 32GB RAM • CAD Optimized</p>
+                <span class="price">₹69,999 - ₹99,999</span>
+                <button class="btn-buy" onclick="addToCart('Workstation Pro')">Add to Cart</button>
+            </div>
+        </div>
     </div>
+
+    <!-- Services Section -->
+    <section style="padding: 4rem 2rem; background: var(--bg-card);" id="services">
+        <h2 class="section-title" style="margin-top: 0;">Our Services</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto;">
+            <div style="text-align: center; padding: 2rem; background: var(--bg-dark); border-radius: 12px; border: 1px solid #334155;">
+                <h3 style="color: var(--neon-green); margin-bottom: 1rem;">Custom PC Building</h3>
+                <p style="color: var(--text-muted); line-height: 1.6;">
+                    Tailored gaming and workstation builds based on your specific needs, budget, and performance requirements.
+                </p>
+            </div>
+            <div style="text-align: center; padding: 2rem; background: var(--bg-dark); border-radius: 12px; border: 1px solid #334155;">
+                <h3 style="color: var(--neon-green); margin-bottom: 1rem;">PC Upgrades</h3>
+                <p style="color: var(--text-muted); line-height: 1.6;">
+                    Upgrade your existing system with latest components. GPU, CPU, RAM, SSD - we handle everything.
+                </p>
+            </div>
+            <div style="text-align: center; padding: 2rem; background: var(--bg-dark); border-radius: 12px; border: 1px solid #334155;">
+                <h3 style="color: var(--neon-green); margin-bottom: 1rem;">Maintenance & Repair</h3>
+                <p style="color: var(--text-muted); line-height: 1.6;">
+                    Professional cleaning, thermal paste replacement, and hardware diagnostics for optimal performance.
+                </p>
+            </div>
+            <div style="text-align: center; padding: 2rem; background: var(--bg-dark); border-radius: 12px; border: 1px solid #334155;">
+                <h3 style="color: var(--neon-green); margin-bottom: 1rem;">Consultation</h3>
+                <p style="color: var(--text-muted); line-height: 1.6;">
+                    Free advice on component selection, compatibility, and future-proofing your build.
+                </p>
+            </div>
+        </div>
+    </section>
 
     <section style="background: var(--bg-card); padding: 4rem 2rem; margin-top: 4rem;" id="custom">
         <h2 class="section-title" style="margin-top: 0;">Request Custom Quote</h2>
@@ -297,6 +385,52 @@
 
                 <button type="submit" class="btn-primary" style="width: 100%;">Get Free Quote</button>
             </form>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section style="padding: 4rem 2rem; background: var(--bg-dark);">
+        <h2 class="section-title" style="margin-top: 0;">What Our Customers Say</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto;">
+            <div style="background: var(--bg-card); padding: 2rem; border-radius: 12px; border: 1px solid #334155;">
+                <p style="color: var(--text-muted); font-style: italic; margin-bottom: 1rem;">
+                    "Amazing build quality and performance! My new rig handles all the latest games at max settings. 
+                    The team at VEXA-RIGS really knows their stuff."
+                </p>
+                <div style="display: flex; align-items: center;">
+                    <div style="width: 40px; height: 40px; background: var(--neon-green); border-radius: 50%; margin-right: 1rem;"></div>
+                    <div>
+                        <strong style="color: var(--text-main);">Rahul Sharma</strong>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; margin: 0;">Gamer & Streamer</p>
+                    </div>
+                </div>
+            </div>
+            <div style="background: var(--bg-card); padding: 2rem; border-radius: 12px; border: 1px solid #334155;">
+                <p style="color: var(--text-muted); font-style: italic; margin-bottom: 1rem;">
+                    "Got my workstation for 3D modeling. The performance is incredible and the price was very reasonable. 
+                    Highly recommend for professionals!"
+                </p>
+                <div style="display: flex; align-items: center;">
+                    <div style="width: 40px; height: 40px; background: var(--neon-green); border-radius: 50%; margin-right: 1rem;"></div>
+                    <div>
+                        <strong style="color: var(--text-main);">Priya Patel</strong>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; margin: 0;">3D Artist</p>
+                    </div>
+                </div>
+            </div>
+            <div style="background: var(--bg-card); padding: 2rem; border-radius: 12px; border: 1px solid #334155;">
+                <p style="color: var(--text-muted); font-style: italic; margin-bottom: 1rem;">
+                    "Best PC building service in Kurseong! They helped me upgrade my old system and now it runs like new. 
+                    Great customer service throughout."
+                </p>
+                <div style="display: flex; align-items: center;">
+                    <div style="width: 40px; height: 40px; background: var(--neon-green); border-radius: 50%; margin-right: 1rem;"></div>
+                    <div>
+                        <strong style="color: var(--text-main);">Amit Kumar</strong>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; margin: 0;">Small Business Owner</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
