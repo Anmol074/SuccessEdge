@@ -54,6 +54,37 @@
         }
         .nav-links a:hover { color: var(--neon-green); }
 
+        /* Cart Styles */
+        .cart-container {
+            position: relative;
+            margin-left: 25px;
+        }
+        .cart-btn {
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: 0.3s;
+            position: relative;
+        }
+        .cart-btn:hover { color: var(--neon-green); }
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: var(--neon-green);
+            color: black;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            font-size: 0.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
         /* --- HERO SECTION --- */
         .hero {
             text-align: center;
@@ -197,6 +228,195 @@
             font-size: 1.2rem;
         }
 
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        .modal-content {
+            background-color: var(--bg-card);
+            margin: 5% auto;
+            padding: 0;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 600px;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .modal-header {
+            padding: 1.5rem;
+            border-bottom: 1px solid #334155;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .modal-header h2 {
+            margin: 0;
+            color: var(--neon-green);
+        }
+        .close {
+            color: var(--text-muted);
+            font-size: 2rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close:hover { color: var(--neon-green); }
+        .modal-body { padding: 1.5rem; }
+
+        /* Cart Item Styles */
+        .cart-item {
+            display: flex;
+            align-items: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid #334155;
+        }
+        .cart-item:last-child { border-bottom: none; }
+        .cart-item img {
+            width: 80px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-right: 1rem;
+        }
+        .cart-item-details {
+            flex: 1;
+        }
+        .cart-item-details h4 {
+            margin: 0 0 0.5rem 0;
+            color: var(--text-main);
+        }
+        .cart-item-details p {
+            margin: 0;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        .quantity-controls {
+            display: flex;
+            align-items: center;
+            margin: 0.5rem 0;
+        }
+        .quantity-btn {
+            background: var(--bg-dark);
+            border: 1px solid #475569;
+            color: var(--text-main);
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .quantity-btn:hover { border-color: var(--neon-green); }
+        .quantity-input {
+            width: 50px;
+            text-align: center;
+            margin: 0 0.5rem;
+            padding: 0.25rem;
+            background: var(--input-bg);
+            border: 1px solid #475569;
+            border-radius: 4px;
+            color: white;
+        }
+        .remove-btn {
+            background: #dc3545;
+            color: white;
+            border: none;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            margin-left: 1rem;
+        }
+        .remove-btn:hover { background: #c82333; }
+        .cart-total {
+            text-align: right;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--neon-green);
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #334155;
+        }
+        .cart-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        .cart-actions button {
+            flex: 1;
+            padding: 0.75rem;
+            border: none;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .clear-cart {
+            background: #6c757d;
+            color: white;
+        }
+        .clear-cart:hover { background: #5a6268; }
+        .checkout-btn {
+            background: var(--neon-green);
+            color: black;
+        }
+        .checkout-btn:hover { background: #00cc88; }
+
+        /* Checkout Form Styles */
+        .checkout-form .form-group {
+            margin-bottom: 1rem;
+        }
+        .checkout-form label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--neon-green);
+            font-weight: bold;
+        }
+        .checkout-form input,
+        .checkout-form select,
+        .checkout-form textarea {
+            width: 100%;
+            padding: 0.75rem;
+            background-color: var(--input-bg);
+            border: 1px solid #475569;
+            border-radius: 4px;
+            color: white;
+            font-size: 1rem;
+            box-sizing: border-box;
+        }
+        .checkout-form input:focus,
+        .checkout-form select:focus,
+        .checkout-form textarea:focus {
+            outline: none;
+            border-color: var(--neon-green);
+        }
+        .checkout-summary {
+            background: var(--bg-dark);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+        .checkout-summary h3 {
+            margin: 0 0 1rem 0;
+            color: var(--neon-green);
+        }
+        .checkout-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            color: var(--text-muted);
+        }
+        .checkout-total {
+            border-top: 1px solid #334155;
+            padding-top: 0.5rem;
+            font-weight: bold;
+            color: var(--text-main);
+        }
+
         /* --- FOOTER --- */
         footer {
             text-align: center;
@@ -218,6 +438,10 @@
             <a href="#services">Services</a>
             <a href="#custom">Custom Build</a>
             <a href="#contact">Contact</a>
+            <div class="cart-container">
+                <button class="cart-btn" onclick="openCart()">🛒</button>
+                <span class="cart-count" id="cart-count">0</span>
+            </div>
         </div>
     </nav>
 
@@ -448,23 +672,315 @@
         </div>
     </section>
 
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Shopping Cart</h2>
+                <span class="close" onclick="closeCart()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div id="cart-items">
+                    <p style="text-align: center; color: var(--text-muted);">Your cart is empty</p>
+                </div>
+                <div class="cart-actions">
+                    <button class="clear-cart" onclick="clearCart()">Clear Cart</button>
+                    <button class="checkout-btn" onclick="openCheckout()">Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div id="checkout-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Checkout</h2>
+                <span class="close" onclick="closeCheckout()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="checkout-summary" id="checkout-summary">
+                    <!-- Order summary will be populated by JavaScript -->
+                </div>
+                <form class="checkout-form" onsubmit="handleCheckout(event)">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" placeholder="john@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" placeholder="+91 9876543210" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Delivery Address</label>
+                        <textarea rows="3" placeholder="Full address for delivery" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Payment Method</label>
+                        <select required>
+                            <option value="">Select Payment Method</option>
+                            <option value="cod">Cash on Delivery</option>
+                            <option value="upi">UPI Payment</option>
+                            <option value="card">Credit/Debit Card</option>
+                            <option value="bank">Bank Transfer</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Additional Notes</label>
+                        <textarea rows="2" placeholder="Any special instructions..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary" style="width: 100%;">Place Order</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <footer>
         <p>&copy; 2025 VEXA-RIGS. All rights reserved.</p>
     </footer>
 
     <script>
+        // Cart functionality
+        let cart = JSON.parse(localStorage.getItem('vexaRigsCart')) || [];
+
+        // Product data
+        const products = {
+            'The Starter Edge': {
+                name: 'The Starter Edge',
+                specs: 'Intel i5 • RTX 3060 • 16GB RAM • 1TB SSD',
+                price: 29999,
+                image: 'https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=500&q=60'
+            },
+            'Pro Streamer': {
+                name: 'Pro Streamer',
+                specs: 'AMD Ryzen 7 • RTX 4070 • 32GB RAM • 2TB NVMe',
+                price: 49999,
+                image: 'https://images.unsplash.com/photo-1593640408182-31c70c8268f5?auto=format&fit=crop&w=500&q=60'
+            },
+            'God Mode': {
+                name: 'God Mode',
+                specs: 'Intel i9 • RTX 4090 • 64GB RAM • Liquid Cooled',
+                price: 89999,
+                image: 'https://images.unsplash.com/photo-1625842268584-8f3296236761?auto=format&fit=crop&w=500&q=60'
+            },
+            'Content Creator': {
+                name: 'Content Creator',
+                specs: 'AMD Ryzen 9 • RTX 4070 Ti • 64GB RAM • 4TB SSD',
+                price: 79999,
+                image: 'https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?auto=format&fit=crop&w=500&q=60'
+            },
+            'Budget Beast': {
+                name: 'Budget Beast',
+                specs: 'AMD Ryzen 5 • RTX 3050 • 16GB RAM • 512GB SSD',
+                price: 24999,
+                image: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=500&q=60'
+            },
+            'Workstation Pro': {
+                name: 'Workstation Pro',
+                specs: 'Intel i7 • RTX A4000 • 32GB RAM • CAD Optimized',
+                price: 69999,
+                image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=500&q=60'
+            }
+        };
+
+        function updateCartCount() {
+            const count = cart.reduce((total, item) => total + item.quantity, 0);
+            document.getElementById('cart-count').textContent = count;
+            localStorage.setItem('vexaRigsCart', JSON.stringify(cart));
+        }
+
+        function addToCart(productName) {
+            const product = products[productName];
+            if (!product) return;
+
+            const existingItem = cart.find(item => item.name === productName);
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({
+                    name: product.name,
+                    specs: product.specs,
+                    price: product.price,
+                    image: product.image,
+                    quantity: 1
+                });
+            }
+            updateCartCount();
+            alert(`${productName} has been added to your cart!`);
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCartCount();
+            renderCart();
+        }
+
+        function updateQuantity(index, newQuantity) {
+            if (newQuantity <= 0) {
+                removeFromCart(index);
+                return;
+            }
+            cart[index].quantity = parseInt(newQuantity);
+            updateCartCount();
+            renderCart();
+        }
+
+        function clearCart() {
+            if (confirm('Are you sure you want to clear your cart?')) {
+                cart = [];
+                updateCartCount();
+                renderCart();
+            }
+        }
+
+        function renderCart() {
+            const cartItems = document.getElementById('cart-items');
+            if (cart.length === 0) {
+                cartItems.innerHTML = '<p style="text-align: center; color: var(--text-muted);">Your cart is empty</p>';
+                return;
+            }
+
+            let html = '';
+            let total = 0;
+
+            cart.forEach((item, index) => {
+                const itemTotal = item.price * item.quantity;
+                total += itemTotal;
+                html += `
+                    <div class="cart-item">
+                        <img src="${item.image}" alt="${item.name}">
+                        <div class="cart-item-details">
+                            <h4>${item.name}</h4>
+                            <p>${item.specs}</p>
+                            <p style="color: var(--neon-green); font-weight: bold;">₹${item.price.toLocaleString()}</p>
+                            <div class="quantity-controls">
+                                <button class="quantity-btn" onclick="updateQuantity(${index}, ${item.quantity - 1})">-</button>
+                                <input type="number" class="quantity-input" value="${item.quantity}" 
+                                       onchange="updateQuantity(${index}, this.value)" min="1">
+                                <button class="quantity-btn" onclick="updateQuantity(${index}, ${item.quantity + 1})">+</button>
+                                <button class="remove-btn" onclick="removeFromCart(${index})">Remove</button>
+                            </div>
+                        </div>
+                        <div style="text-align: right; color: var(--neon-green); font-weight: bold;">
+                            ₹${itemTotal.toLocaleString()}
+                        </div>
+                    </div>
+                `;
+            });
+
+            html += `<div class="cart-total">Total: ₹${total.toLocaleString()}</div>`;
+            cartItems.innerHTML = html;
+        }
+
+        function openCart() {
+            renderCart();
+            document.getElementById('cart-modal').style.display = 'block';
+        }
+
+        function closeCart() {
+            document.getElementById('cart-modal').style.display = 'none';
+        }
+
+        function openCheckout() {
+            if (cart.length === 0) {
+                alert('Your cart is empty!');
+                return;
+            }
+            closeCart();
+            renderCheckoutSummary();
+            document.getElementById('checkout-modal').style.display = 'block';
+        }
+
+        function closeCheckout() {
+            document.getElementById('checkout-modal').style.display = 'none';
+        }
+
+        function renderCheckoutSummary() {
+            const summary = document.getElementById('checkout-summary');
+            let html = '<h3>Order Summary</h3>';
+            let total = 0;
+
+            cart.forEach(item => {
+                const itemTotal = item.price * item.quantity;
+                total += itemTotal;
+                html += `
+                    <div class="checkout-item">
+                        <span>${item.name} (x${item.quantity})</span>
+                        <span>₹${itemTotal.toLocaleString()}</span>
+                    </div>
+                `;
+            });
+
+            html += `
+                <div class="checkout-item checkout-total">
+                    <span>Total Amount</span>
+                    <span>₹${total.toLocaleString()}</span>
+                </div>
+            `;
+
+            summary.innerHTML = html;
+        }
+
+        function handleCheckout(event) {
+            event.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(event.target);
+            const orderData = {
+                customer: {
+                    name: formData.get('name') || event.target.querySelector('input[type="text"]').value,
+                    email: formData.get('email') || event.target.querySelector('input[type="email"]').value,
+                    phone: formData.get('phone') || event.target.querySelector('input[type="tel"]').value,
+                    address: formData.get('address') || event.target.querySelector('textarea').value,
+                    paymentMethod: formData.get('payment') || event.target.querySelector('select').value,
+                    notes: formData.get('notes') || event.target.querySelector('textarea:last-of-type').value
+                },
+                items: cart,
+                total: cart.reduce((sum, item) => sum + (item.price * item.quantity), 0),
+                orderDate: new Date().toISOString()
+            };
+
+            // Here you would typically send this data to your backend
+            console.log('Order placed:', orderData);
+            
+            alert(`Thank you for your order, ${orderData.customer.name}! We have received your order for ₹${orderData.total.toLocaleString()}. Our team will contact you shortly to confirm delivery details.`);
+            
+            // Clear cart and close modal
+            cart = [];
+            updateCartCount();
+            closeCheckout();
+        }
+
+        // Other existing functions
         function scrollToShop() {
             document.getElementById('shop').scrollIntoView({behavior: 'smooth'});
         }
 
-        function addToCart(productName) {
-            alert(productName + " has been added to your cart!");
-        }
-
         function handleFormSubmit(e) {
-            e.preventDefault(); // Prevents page reload
+            e.preventDefault();
             alert("Thank you! We have received your quote request. Our team will contact you shortly.");
         }
+
+        // Initialize cart count on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            updateCartCount();
+            
+            // Close modals when clicking outside
+            window.onclick = function(event) {
+                const cartModal = document.getElementById('cart-modal');
+                const checkoutModal = document.getElementById('checkout-modal');
+                if (event.target === cartModal) {
+                    closeCart();
+                }
+                if (event.target === checkoutModal) {
+                    closeCheckout();
+                }
+            };
+        });
     </script>
 
 </body>
