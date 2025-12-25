@@ -9,12 +9,12 @@
     <style>
         /* --- MODERN GAMING THEME SETUP --- */
         :root {
-            --bg-dark: #0f172a;       
-            --bg-card: #1e293b;       
-            --neon-green: #00ff9d;    
+            --bg-dark: #1a0b2e;       /* Dark Aubergine background */
+            --bg-card: #2d1b4e;       /* Lighter aubergine for cards */
+            --neon-purple: #9d4edd;  /* Purple accent color */
             --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-            --input-bg: #334155;
+            --text-muted: #c4b5fd;
+            --input-bg: #4c1d95;
         }
 
         body {
@@ -43,7 +43,7 @@
             letter-spacing: 1px;
             color: white;
         }
-        .logo span { color: var(--neon-green); } 
+        .logo span { color: var(--neon-purple); } 
         
         .nav-links a {
             margin-left: 25px;
@@ -52,12 +52,13 @@
             font-weight: 500;
             transition: 0.3s;
         }
-        .nav-links a:hover { color: var(--neon-green); }
+        .nav-links a:hover { color: var(--neon-purple); }
 
         /* Cart Styles */
         .cart-container {
             position: relative;
             margin-left: 25px;
+            display: inline-block;
         }
         .cart-btn {
             background: none;
@@ -68,7 +69,7 @@
             transition: 0.3s;
             position: relative;
         }
-        .cart-btn:hover { color: var(--neon-green); }
+        .cart-btn:hover { color: var(--neon-purple); }
         .cart-count {
             position: absolute;
             top: -8px;
@@ -79,10 +80,13 @@
             width: 20px;
             height: 20px;
             font-size: 0.8rem;
-            display: flex;
+            display: none;
             align-items: center;
             justify-content: center;
             font-weight: bold;
+        }
+        .cart-count.show {
+            display: flex;
         }
 
         /* --- HERO SECTION --- */
@@ -96,7 +100,7 @@
             margin-bottom: 1rem;
             line-height: 1.2;
         }
-        .hero span { color: var(--neon-green); }
+        .hero span { color: var(--neon-purple); }
         .hero p {
             font-size: 1.2rem;
             color: var(--text-muted);
@@ -104,7 +108,7 @@
             margin: 0 auto 2.5rem auto;
         }
         .btn-primary {
-            background-color: var(--neon-green);
+            background-color: var(--neon-purple);
             color: #000;
             padding: 1rem 2.5rem;
             border: none;
@@ -145,7 +149,7 @@
             transition: 0.3s;
         }
         .product-card:hover {
-            border-color: var(--neon-green);
+            border-color: var(--neon-purple);
             transform: translateY(-5px);
         }
 
@@ -159,19 +163,19 @@
         .card-info { padding: 1.5rem; }
         .card-info h3 { margin: 0 0 0.5rem 0; font-size: 1.5rem; }
         .specs { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem; }
-        .price { font-size: 1.4rem; color: var(--neon-green); font-weight: bold; display: block; margin-bottom: 1rem;}
+        .price { font-size: 1.4rem; color: var(--neon-purple); font-weight: bold; display: block; margin-bottom: 1rem;}
         
         .btn-buy {
             width: 100%;
             padding: 0.8rem;
             background: transparent;
-            border: 1px solid var(--neon-green);
-            color: var(--neon-green);
+            border: 1px solid var(--neon-purple);
+            color: var(--neon-purple);
             font-weight: bold;
             cursor: pointer;
             transition: 0.3s;
         }
-        .btn-buy:hover { background: var(--neon-green); color: black; }
+        .btn-buy:hover { background: var(--neon-purple); color: black; }
 
         /* --- FORM STYLES --- */
         .custom-form-container {
@@ -185,7 +189,7 @@
         .form-group label {
             display: block;
             margin-bottom: 0.5rem;
-            color: var(--neon-green);
+            color: var(--neon-purple);
             font-weight: bold;
         }
         .form-control {
@@ -200,7 +204,7 @@
         }
         .form-control:focus {
             outline: none;
-            border-color: var(--neon-green);
+            border-color: var(--neon-purple);
         }
         
         /* --- CONTACT SECTION --- */
@@ -267,7 +271,7 @@
             font-weight: bold;
             cursor: pointer;
         }
-        .close:hover { color: var(--neon-green); }
+        .close:hover { color: var(--neon-purple); }
         .modal-body { padding: 1.5rem; }
 
         /* Cart Item Styles */
@@ -311,7 +315,7 @@
             cursor: pointer;
             border-radius: 4px;
         }
-        .quantity-btn:hover { border-color: var(--neon-green); }
+        .quantity-btn:hover { border-color: var(--neon-purple); }
         .quantity-input {
             width: 50px;
             text-align: center;
@@ -337,7 +341,7 @@
             text-align: right;
             font-size: 1.2rem;
             font-weight: bold;
-            color: var(--neon-green);
+            color: var(--neon-purple);
             margin-top: 1rem;
             padding-top: 1rem;
             border-top: 1px solid #334155;
@@ -361,10 +365,10 @@
         }
         .clear-cart:hover { background: #5a6268; }
         .checkout-btn {
-            background: var(--neon-green);
+            background: var(--neon-purple);
             color: black;
         }
-        .checkout-btn:hover { background: #00cc88; }
+        .checkout-btn:hover { background: #7c3aed; }
 
         /* Checkout Form Styles */
         .checkout-form .form-group {
@@ -373,7 +377,7 @@
         .checkout-form label {
             display: block;
             margin-bottom: 0.5rem;
-            color: var(--neon-green);
+            color: var(--neon-purple);
             font-weight: bold;
         }
         .checkout-form input,
@@ -392,7 +396,7 @@
         .checkout-form select:focus,
         .checkout-form textarea:focus {
             outline: none;
-            border-color: var(--neon-green);
+            border-color: var(--neon-purple);
         }
         .checkout-summary {
             background: var(--bg-dark);
@@ -402,7 +406,7 @@
         }
         .checkout-summary h3 {
             margin: 0 0 1rem 0;
-            color: var(--neon-green);
+            color: var(--neon-purple);
         }
         .checkout-item {
             display: flex;
@@ -455,7 +459,7 @@
     <section style="padding: 4rem 2rem; background: var(--bg-dark);" id="about">
         <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
             <div>
-                <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Why Choose <span style="color: var(--neon-green);">VEXA-RIGS</span>?</h2>
+                <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Why Choose <span style="color: var(--neon-purple);">VEXA-RIGS</span>?</h2>
                 <p style="color: var(--text-muted); line-height: 1.6; margin-bottom: 1.5rem;">
                     With over 5 years of experience in custom PC building, we understand that every gamer and professional has unique needs. 
                     That's why we offer personalized builds that match your budget and performance requirements.
@@ -545,25 +549,25 @@
         <h2 class="section-title" style="margin-top: 0;">Our Services</h2>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto;">
             <div style="text-align: center; padding: 2rem; background: var(--bg-dark); border-radius: 12px; border: 1px solid #334155;">
-                <h3 style="color: var(--neon-green); margin-bottom: 1rem;">Custom PC Building</h3>
+                <h3 style="color: var(--neon-purple); margin-bottom: 1rem;">Custom PC Building</h3>
                 <p style="color: var(--text-muted); line-height: 1.6;">
                     Tailored gaming and workstation builds based on your specific needs, budget, and performance requirements.
                 </p>
             </div>
             <div style="text-align: center; padding: 2rem; background: var(--bg-dark); border-radius: 12px; border: 1px solid #334155;">
-                <h3 style="color: var(--neon-green); margin-bottom: 1rem;">PC Upgrades</h3>
+                <h3 style="color: var(--neon-purple); margin-bottom: 1rem;">PC Upgrades</h3>
                 <p style="color: var(--text-muted); line-height: 1.6;">
                     Upgrade your existing system with latest components. GPU, CPU, RAM, SSD - we handle everything.
                 </p>
             </div>
             <div style="text-align: center; padding: 2rem; background: var(--bg-dark); border-radius: 12px; border: 1px solid #334155;">
-                <h3 style="color: var(--neon-green); margin-bottom: 1rem;">Maintenance & Repair</h3>
+                <h3 style="color: var(--neon-purple); margin-bottom: 1rem;">Maintenance & Repair</h3>
                 <p style="color: var(--text-muted); line-height: 1.6;">
                     Professional cleaning, thermal paste replacement, and hardware diagnostics for optimal performance.
                 </p>
             </div>
             <div style="text-align: center; padding: 2rem; background: var(--bg-dark); border-radius: 12px; border: 1px solid #334155;">
-                <h3 style="color: var(--neon-green); margin-bottom: 1rem;">Consultation</h3>
+                <h3 style="color: var(--neon-purple); margin-bottom: 1rem;">Consultation</h3>
                 <p style="color: var(--text-muted); line-height: 1.6;">
                     Free advice on component selection, compatibility, and future-proofing your build.
                 </p>
@@ -666,7 +670,7 @@
                 Giddha Pahar, Kurseong - 734203<br>
                 West Bengal, India
             </p>
-            <p style="color: var(--neon-green); font-size: 0.9rem; margin-top: 1rem;">
+            <p style="color: var(--neon-purple); font-size: 0.9rem; margin-top: 1rem;">
                 Open Mon-Sat: 10:00 AM - 8:00 PM
             </p>
         </div>
@@ -789,7 +793,15 @@
 
         function updateCartCount() {
             const count = cart.reduce((total, item) => total + item.quantity, 0);
-            document.getElementById('cart-count').textContent = count;
+            const cartCountElement = document.getElementById('cart-count');
+            cartCountElement.textContent = count;
+            
+            if (count > 0) {
+                cartCountElement.classList.add('show');
+            } else {
+                cartCountElement.classList.remove('show');
+            }
+            
             localStorage.setItem('vexaRigsCart', JSON.stringify(cart));
         }
 
